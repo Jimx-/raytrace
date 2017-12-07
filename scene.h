@@ -8,6 +8,7 @@
 #include "frame_buffer.h"
 #include "object.h"
 #include "camera.h"
+#include "mtl.h"
 
 #include <memory>
 #include <vector>
@@ -16,6 +17,8 @@
 class Scene {
 public:
     explicit Scene(int num_super_samples = 1);
+
+	friend class mtl;
 
     void add_object(Object* object);
     void add_light(Light* light);
