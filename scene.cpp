@@ -245,5 +245,6 @@ bool Scene::shadow_test(const Ray& ray, double dist)
 
     tie(intersection, obj) = find_closest_intersection(ray);
 
+    //if (obj->get_material()->refractive_index != Material::NO_REFRATION) return false;
     return intersection.hit && intersection.t < dist - 10e-4;
 }
